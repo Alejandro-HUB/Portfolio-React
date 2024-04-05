@@ -1,0 +1,120 @@
+/* FormComponent.css */
+
+.background-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: -1;
+    background-size: 400% 400%; /* Make the gradient larger than the container */
+    animation: moveGradient 10s infinite alternate;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background: white;
+    color: var(--text-color-dark);
+}
+
+button {
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    padding: 0.5rem 1rem;
+    background-color: black;
+    cursor: pointer;
+    color: var(--text-color-light)
+}
+
+    button:hover {
+        border-color: #646cff;
+    }
+
+    button:focus,
+    button:focus-visible {
+        outline: 4px auto -webkit-focus-ring-color;
+    }
+
+
+/* Chat.css */
+.chat-container {
+    /* Set text color based on theme */
+    color: var(--text-color-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff; /* Plain background for the form */
+    padding: 2rem;
+}
+
+.chat-window {
+    height: 400px;
+    width: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+.message {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+}
+
+    .message.user {
+        background-color: #e0e0e0;
+        align-self: flex-end;
+    }
+
+    .message.gemini {
+        background-color: #f0f8ff; /* Tint Gemini messages */
+        align-self: flex-start;
+    }
+
+.input-area {
+    display: flex;
+    align-items: center;
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+    .form-container {
+        color: var(--text-color-dark);
+    }
+}
+*/
